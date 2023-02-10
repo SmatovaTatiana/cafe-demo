@@ -137,4 +137,4 @@ DOCTEMP_SESSION_ID = 'doc_temp'
 
 # SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
-CSRF_TRUSTED_ORIGINS = ['https://cafe-demo-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://*.cafe-demo-production.up.railway.app/']
