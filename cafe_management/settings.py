@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-e%_1pqqt7=*&$qtrw$o))*$f-_n=%x*g)0_-*_)q9^7!5=q)g-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cafe-demo-production.up.railway.app']
+ALLOWED_HOSTS = ['127.0.0.1', 'cafe-demo-production.up.railway.app']
 
 # Application definition
 
@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'   # for deploy
 ]
 
 ROOT_URLCONF = 'cafe_management.urls'
@@ -116,6 +117,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "cafecrm/static"),
+    ]
+# add for deploy
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'cafecrm/assets')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

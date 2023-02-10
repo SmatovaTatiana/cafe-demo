@@ -1,0 +1,63 @@
+:root{
+	--color-gold: #e0a164
+
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: var(--bs-table-striped-bg);
+}
+
+th{
+	font-weight: inherit;
+	color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.logo-login{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.input-field-form {
+	border-radius: 0.375rem;
+	margin-bottom: 10px;
+	border-width: 2px;
+}
+.btn-login{
+	color: var(--color-gold);
+    background-color: #141619;
+	padding-bottom: 6px;
+	border-radius: 0.375rem;
+}
+
+.btn-login:hover {
+	border-width: medium;
+	font-weight: 500;
+}
+
+.dropdown-menu{
+    --bs-dropdown-link-active-bg: #141619;
+}
+
+.alert-warning{
+	margin-top: 15px;
+	background-color: #FFF7E5FF;
+}
+
+.comments{
+	height: 100px;
+	border-radius: 0.375rem;
+	margin-bottom: 10px;
+	border-width: 2px;
+}
+textarea {
+    margin: 0;
+	height: 100px;
+    font-family: inherit;
+    font-size: inherit;
+    /* line-height: inherit;*/
+}
+
+.check-list{
+	font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+	text-align: start;
+}
