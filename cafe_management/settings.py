@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'cafecrm',
     'doc_temp',
     'sell_temp',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -48,7 +49,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'   # for deploy
+    'whitenoise.middleware.WhiteNoiseMiddleware',   # for deploy
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'cafe_management.urls'
@@ -135,4 +137,4 @@ DOCTEMP_SESSION_ID = 'doc_temp'
 
 # SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
-CSRF_TRUSTED_ORIGINS = ['https://https://cafe-demo-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://cafe-demo-production.up.railway.app/']
