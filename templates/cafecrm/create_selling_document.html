@@ -25,7 +25,7 @@
               <br> Не хватает {{ deficit }}
             </div>
             <br>
-            <a href="{% url 'sell_temp:sell_detail' %}" class="button light">Изменить количество товара</a>
+
           {% else %}              <!--if no error-->
             <b>Проверьте наименование и количество:</b>
               <!--form-->
@@ -46,7 +46,7 @@
                   <br>
                 <a href="{% url 'cafecrm:drinks' %}" class="button light">Добавить товар </a>
                   <br>
-                <a href="{% url 'sell_temp:sell_detail' %}" class="button light">Изменить его количество</a>
+
                   <br>
                  <b>Если все правильно:</b>
               </div>
